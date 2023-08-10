@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <string.h>
+int isValidString(const char *str) 
+{
+if (strlen(str) > 5) 
+{
+return 1; 
+} 
+else 
+{
+return 0; 
+}
+}
+int main() 
+{
+char input[100];
+printf("Enter a string: ");
+fgets(input, sizeof(input), stdin);
+if (input[strlen(input) - 1] == '\n') 
+{
+input[strlen(input) - 1] = '\0';
+}
+ if (isValidString(input)) {
+printf("The string is valid.\n");
+} 
+else 
+{
+printf("The string is not valid.\n");
+}
+return 0;
+}
